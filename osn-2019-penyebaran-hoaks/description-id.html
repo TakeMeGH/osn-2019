@@ -1,0 +1,119 @@
+<h3>Deskripsi</h3>
+<p>
+  Pak Dengklek baru saja mengembangkan situs sosial media. Terdapat N pengguna pada situs ini,
+  dinomori 1 sampai N. Terdapat S jam dalam satu hari. Seluruh pengguna ini memiliki jadwal
+  penggunaan yang tetap dari hari ke hari. Sehingga, setiap harinya pengguna ke-i akan terhubung
+  (<i>online</i>) pada situs ini sebanyak T[i] kali:
+  <ul>
+    <li>dari awal jam ke-A[i][1] sampai akhir jam ke-B[i][1],</li>
+    <li>dari awal jam ke-A[i][2] sampai akhir jam ke-B[i][2],</li>
+    <li>...</li>
+    <li>dan dari awal jam ke-A[i][T[i]] sampai akhir jam ke-B[i][T[i]],</li>
+  </ul>
+</p><p>
+  Pada setiap saat, seluruh pengguna pada situs ini senang berbagi berita kepada seluruh pengguna
+  lainnya yang sedang terhubung. Celakanya, salah satu dari N pengguna ini memiliki hoaks
+  pada awal hari pertama dan akan menyebarkannya. Karenanya, seluruh pengguna yang bertemu dengan
+  pengguna ini juga akan memiliki hoaks pada akhir hari pertama. Dua pengguna dinyatakan bertemu
+  jika kedua pengguna tersebut terhubung pada setidaknya satu jam yang sama.
+</p><p>
+  Hoaks ini kemudian tersebar juga pada hari kedua. Sehingga, seluruh pengguna yang bertemu dengan
+  pengguna yang memiliki hoaks pada akhir hari pertama juga akan memiliki hoaks pada akhir hari
+  kedua. Hal ini berlanjut hari-hari berikutnya.
+</p><p>
+  Terdapat Q skenario, dinomori 1 sampai Q. Pada skenario ke-i, pengguna yang pada awal hari pertama
+  memiliki hoaks adalah pengguna ke-P[i]. Skenario yang berbeda mungkin saja menyebabkan penyebaran
+  hoaks yang berbeda. Karenanya, untuk setiap skenario, Pak Dengklek penasaran akan banyaknya
+  pengguna yang memiliki hoaks pada akhir hari ke-N, dengan N adalah banyaknya peserta.
+</p>
+
+<h3>Format Masukan</h3>
+<p>
+  Masukan diberikan dalam format berikut:
+</p>
+<pre>
+N S Q
+T[1] A[1][1] B[1][1] A[1][2] B[1][2] ... A[1][T[1]] B[1][T[1]]
+T[2] A[2][1] B[2][1] A[2][2] B[2][2] ... A[2][T[2]] B[2][T[2]]
+.
+.
+.
+T[N] A[N][1] B[N][1] A[N][2] B[N][2] ... A[N][T[N]] B[N][T[N]]
+P[1]
+P[2]
+.
+.
+.
+P[Q]
+</pre>
+
+<h3>Format Keluaran</h3>
+<p>
+  Q baris: baris ke-i berisi banyaknya pengguna yang memiliki hoaks pada akhir hari ke-N pada
+  skenario ke-i.
+</p>
+
+<samplecase1/>
+
+<h3>Penjelasan Contoh 1</h3>
+<p>
+  Pada skenario pertama, pengguna pertama bertemu dengan pengguna kedua (pada jam kedua sampai jam
+  ketiga) dan pengguna keempat (pada jam kesembilan). Sehingga, pada akhir hari pertama, kedua
+  pengguna tersebut akan memiliki hoaks. Pengguna kedua juga bertemu dengan pengguna ketiga (pada
+  jam pertama). Sehingga, pada akhir hari kedua, pengguna ketiga juga akan memiliki hoaks. Tidak
+  akan ada penyebaran hoaks pada hari ketiga, keempat, dan kelima, sehingga 4 pengguna akan memiliki
+  hoaks pada akhir hari kelima.
+</p><p>
+  Pada skenario kedua, pengguna kelima tidak bertemu dengan pengguna lainnya, sehingga pengguna
+  lainnya tidak akan memiliki hoaks.
+</p>
+
+<h3>Subsoal</h3>
+<p>
+  Untuk semua subsoal, berlaku:
+</p>
+<ul>
+  <li>1 &le; Q &le; N &le; 200.000.</li>
+  <li>1 &le; S &le; 10<sup>9</sup>.</li>
+  <li>1 &le; T[i] &le; S</sup>.</li>
+  <li>Jumlah T[i] untuk seluruh 1 &le; i &le; N tidak melebihi 200.000.</li>
+  <li>1 &le; A[i][j] &le; B[i][j] &le; S</sup>.</li>
+  <li>B[i][j - 1] &lt; A[i][j], untuk 2 &le; j &le; T[i].</li>
+  <li>1 &le; P[i] &le; N.</li>
+  <li>P[i - 1] &lt; P[i], untuk 2 &le; i &le; Q.</li>
+</ul>
+
+<subtask1/>
+<open1/>
+
+<subtask2/>
+<open2/>
+
+<subtask3/>
+<ul>
+  <li>N, S, Q &le; 50.</li>
+  <li>Jumlah T[i] untuk seluruh 1 &le; i &le; N tidak melebihi 50.</li>
+</ul>
+
+<subtask4/>
+<ul>
+  <li>N, Q &le; 50.</li>
+  <li>Jumlah T[i] untuk seluruh 1 &le; i &le; N tidak melebihi 50.</li>
+</ul>
+
+<subtask5/>
+<ul>
+  <li>N, Q &le; 200.</li>
+  <li>Jumlah T[i] untuk seluruh 1 &le; i &le; N tidak melebihi 200.</li>
+</ul>
+
+<subtask6/>
+<ul>
+  <li>N, Q &le; 2.000.</li>
+  <li>Jumlah T[i] untuk seluruh 1 &le; i &le; N tidak melebihi 2.000.</li>
+</ul>
+
+<subtask7/>
+<ul>
+  <li>Tidak ada batasan tambahan.</li>
+</ul>

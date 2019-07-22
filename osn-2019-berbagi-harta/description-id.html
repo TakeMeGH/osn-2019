@@ -1,0 +1,102 @@
+<h3>Deskripsi</h3>
+<p>
+  Anda dan Pak Dengklek baru saja menemukan peti harta karun. Di dalam peti ini terdapat N barang
+  berbeda, dinomori 1 sampai N. Barang ke-i memiliki harga H[i].
+</p><p>
+  Di antara N barang ini, terdapat P barang yang Anda suka, yaitu barang bernomor A[1], A[2], ...,
+  dan A[P]. Secara serupa, terdapat Q barang yang Pak Dengklek suka, yaitu barang bernomor B[1],
+  B[2], ..., dan B[Q]. Setiap barang pasti disukai oleh setidaknya Anda atau Pak Dengklek (atau
+  keduanya).
+</p><p>
+  Secara bergiliran dimulai dari Anda, Anda dan Pak Dengklek akan mengambil salah satu barang yang
+  belum diambil sebelumnya. Anda hanya dapat mengambil barang yang Anda suka. Jika tidak ada lagi
+  barang yang Anda sukai dan belum diambil, maka Anda terpaksa melewatkan giliran Anda. Secara
+  serupa, Pak Dengklek hanya dapat mengambil barang yang disukai olehnya. Pak Dengklek juga terpaksa
+  melewatkan gilirannya jika tidak ada lagi barang yang ia sukai dan belum diambil.
+</p><p>
+  Anda dan Pak Dengklek akan berhenti mengambil barang ketika sudah tidak ada lagi barang yang
+  tersisa. Hitunglah total harga barang maksimum yang dapat Anda ambil jika Pak Dengklek juga
+  berusaha untuk memaksimalkan total harga barang yang ia ambil.
+</p>
+
+<h3>Format Masukan</h3>
+<p>
+  Masukan diberikan dalam format berikut:
+</p>
+<pre>
+N P Q
+H[1] H[2] ... H[N]
+A[1] A[2] ... A[P]
+B[1] B[2] ... B[Q]
+</pre>
+
+<h3>Format Keluaran</h3>
+<p>
+  Sebuah baris yang berisi total harga barang maksimum yang dapat Anda ambil jika Pak Dengklek juga
+  berusaha untuk memaksimalkan total harga barang yang ia ambil.
+</p>
+
+<samplecase1/>
+
+<h3>Penjelasan Contoh 1</h3>
+<p>
+  Berikut skenario yang mungkin terjadi:
+  <ul>
+    <li>Pada giliran pertama, Anda dapat mengambil barang ketiga dan Pak Dengklek dapat mengambil
+        barang kelima.</li>
+    <li>Pada giliran kedua, Anda dapat mengambil barang pertama dan Pak Dengklek dapat mengambil
+        barang kedua.</li>
+    <li>Pada giliran ketiga, Anda dapat mengambil barang keenam dan Pak Dengklek dapat mengambil
+        barang keempat.</li>
+    <li>Pada giliran keempat, Anda tidak dapat mengambil barang dan Pak Dengklek dapat mengambil
+        barang ketujuh.</li>
+  </ul>
+  Seluruh barang telah diambil dan Anda mengambil total harga H[3] + H[1] + H[6] = 6 + 1 + 2 = 9.
+  Tidak ada cara untuk Anda mengambil total harga lebih dari 9.
+</p>
+
+<h3>Subsoal</h3>
+<p>
+  Untuk semua subsoal, berlaku:
+</p>
+<ul>
+  <li>1 &le; N &le; 200.000.</li>
+  <li>1 &le; P, Q &le; N.</li>
+  <li>0 &le; H[i] &le; 1.000.000.</li>
+  <li>1 &le; A[i], B[i] &le; N.</li>
+  <li>A[i - 1] &lt; A[i], untuk 2 &le; i &le; P.</li>
+  <li>B[i - 1] &lt; B[i], untuk 2 &le; i &le; Q.</li>
+  <li>Setiap barang pasti disukai oleh setidaknya Anda atau Pak Dengklek (atau keduanya).</li>
+</ul>
+
+<subtask1/>
+<open1/>
+
+<subtask2/>
+<open2/>
+
+<subtask3/>
+<ul>
+  <li>N &le; 2.</li>
+</ul>
+
+<subtask4/>
+<ul>
+  <li>N &le; 2.000.</li>
+</ul>
+
+<subtask5/>
+<ul>
+  <li>H[i - 1] = H[i], untuk 2 &le; i &le; N.</li>
+</ul>
+
+<subtask6/>
+<ul>
+  <li>P = Q.</li>
+  <li>A[i] = B[i].</li>
+</ul>
+
+<subtask7/>
+<ul>
+  <li>Tidak ada batasan tambahan.</li>
+</ul>

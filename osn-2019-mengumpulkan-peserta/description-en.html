@@ -1,0 +1,110 @@
+<h3>Description</h3>
+<p>
+  The OSN competition will begin soon! Chairs have been arranged to form a rectangle containing R
+  rows (numbered 1 to R) &times; C columns (numbered 1 to C) inside the contest hall. Each chair
+  might be empty or be occupied by an OSN contestant.
+</p><p>
+  The condition of all chairs in the contest hall at this point can be represented by a matrix S. If
+  the chair in the i-th row and the j-th column is empty at this point, then S[i][j] contains a
+  character <code>0</code>. Otherwise, if the chair in the i-th row and the j-th column is occupied
+  by a contestant at this point, then S[i][j] contains a character <code>1</code>.
+</p><p>
+  Pak Dengklek wants to brief the OSN contestants. Looking at the distributed seating of the OSN
+  contestants, Pak Dengklek will gather them first before the briefing. Pak Dengklek wants all
+  contestants to be gathered in one rectangle. In other words, all contestants sit between the
+  r<sub>1</sub>-th to r<sub>2</sub>-th row and the c<sub>1</sub>-th to c<sub>2</sub>-th column (for
+  some value 1 &le; r<sub>1</sub> &le; r<sub>2</sub> &le; R and
+  1 &le; c<sub>1</sub> &le; c<sub>2</sub> &le; C), and there is no empty chair inside the mentioned
+  row and column ranges.
+</p><p>
+  To gather the contestants, Pak Dengklek might have to move some of the contestants to any empty
+  seat. Pak Dengklek wants to move as few contestants as possible since each movement disturbs other
+  contestants. Pak Dengklek is wondering about the minimum number of movements that have to be done
+  for all contestants to be gathered in one rectangle, or if it is impossible to do so.
+</p>
+
+<h3>Input Format</h3>
+<p>
+  The input is given with the following format:
+</p>
+<pre>
+R C
+S[1][1]S[1][2]...S[1][C]
+S[2][1]S[2][2]...S[2][C]
+.             .  .
+.              . .
+.               ..
+S[R][1]S[R][2]...S[R][C]
+</pre>
+
+<h3>Output Format</h3>
+<p>
+  A single line containing the minimum number of movements that have to be done for all contestants
+  to be gathered in one rectangle, or <code>-1</code> if it is impossible to do so.
+</p>
+
+<samplecase1/>
+
+<h3>Explanation of Sample 1</h3>
+<p>
+  In this sample, all contestants have gathered in one rectangle, so no movement has to be done.
+</p>
+
+<samplecase2/>
+
+<h3>Explanation of Sample 2</h3>
+<p>
+  In this sample, Pak Dengklek can move the contestant sitting in the first row and the third column
+  to the seat in the third row and the first column. After the move, all contestants have gathered
+  in one rectangle, so only 1 movement has to be done.
+</p>
+
+<samplecase3/>
+
+<h3>Explanation of Sample 3</h3>
+<p>
+  In this sample, there is no way to gather all contestants in one rectangle.
+</p>
+
+<h3>Subtasks</h3>
+<p>
+  For all subtasks:
+</p>
+<ul>
+  <li>1 &le; R, C.</li>
+  <li>1 &le; R &times; C &le; 100,000.</li>
+  <li>S contains only the characters <code>0</code> or <code>1</code>.</li>
+  <li>There is at least one character <code>1</code> in S.</li>
+</ul>
+
+<subtask1/>
+<open1/>
+
+<subtask2/>
+<open2/>
+
+<subtask3/>
+<ul>
+  <li>R = 1.</li>
+  <li>R &times; C &le; 2,000.</li>
+</ul>
+
+<subtask4/>
+<ul>
+  <li>R = 1.</li>
+</ul>
+
+<subtask5/>
+<ul>
+  <li>R &times; C &le; 200.</li>
+</ul>
+
+<subtask6/>
+<ul>
+  <li>R &times; C &le; 2,000.</li>
+</ul>
+
+<subtask7/>
+<ul>
+  <li>No additional constraints.</li>
+</ul>

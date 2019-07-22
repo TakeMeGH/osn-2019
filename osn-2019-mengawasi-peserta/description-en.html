@@ -1,0 +1,167 @@
+<h3>Description</h3>
+<p>
+  The OSN competition will begin soon! Chairs have been arranged to form a rectangle containing R
+  rows (numbered 1 to R from north to south) &times; C columns (numbered 1 to C from west to east)
+  inside the contest hall. The chair in the i-th row and the j-th column is provided for an OSN
+  contestant if (i + j) is odd and provided for an OSN invigilator if (i + j) is even.
+</p><p>
+  Each chair provided for an OSN invigilator is still empty at this point. Each chair provided for
+  an OSN contestant might be empty or be occupied by an OSN contestant. There is at least one OSN
+  contestant.
+</p><p>
+  The condition of all chairs in the contest hall at this point can be represented by a matrix S. If
+  the chair in the i-th row and the j-th column is empty at this point, then S[i][j] contains a
+  character <code>.</code>. Otherwise, if the chair in the i-th row and the j-th column is occupied
+  by a contestant at this point, then S[i][j] contains a character <code>x</code>.
+</p><p>
+  You want to invigilate all the OSN contestants. Therefore, for all chairs provided for an OSN
+  invigilator, you can put an invigilator and determine the sitting direction of the invigilator.
+  Invigilator sitting in the i-th row and the j-th column can invigilate:
+  <ul>
+    <li>An OSN contestant sitting in the (i + 1)-th row and the j-th column, if the invigilator
+        sits to the south.</li>
+    <li>An OSN contestant sitting in the (i - 1)-th row and the j-th column, if the invigilator
+        sits to the north.</li>
+    <li>An OSN contestant sitting in the i-th row and the (j + 1)-th column, if the invigilator
+        sits to the east.</li>
+    <li>An OSN contestant sitting in the i-th row and the (j - 1)-th column, if the invigilator
+        sits to the west.</li>
+  </ul>
+</p><p>
+  Your score will depend on the number of OSN contestants that are invigilated by at least one
+  invigilator, using a formula that will be explained in the Scoring section.
+</p>
+
+<h3>Problem Type Information</h3>
+<p>
+  This is an "output-only" problem. For each test case, you write the output to a file.
+</p><p>
+  The input files for this problem can be downloaded <a href="render/inputs.zip">here</a>. Inside
+  the .zip file, there are 1 + 5 input files to solve: mengawasi_sample_1.in,
+  mengawasi_1.in, mengawasi_2.in, ..., mengawasi_5.in. The sample input (mengawasi_sample_1.in) is
+  not included in the final score.
+</p><p>
+  For each input file that you solve (you don't have to solve all input files), create an output
+  file mengawasi_sample_X.out (for sample input) or mengawasi_X.out, where X
+  is the test case number. Then, compress all files into a single .zip file, and submit.
+</p>
+
+<h3>Input Format</h3>
+<p>
+  The input is given with the following format:
+</p>
+<pre>
+R C
+S[1][1]S[1][2]...S[1][C]
+S[2][1]S[2][2]...S[2][C]
+.             .  .
+.              . .
+.               ..
+S[R][1]S[R][2]...S[R][C]
+</pre>
+
+<h3>Output Format</h3>
+<p>
+  R lines: the i-th line contains C characters. The j-th character in the i-th line is:
+  <ul>
+    <li><code>.</code> if the chair in the i-th row and the j-th column is initially empty and you
+        let it to be empty.</li>
+    <li><code>x</code> if the chair in the i-th row and the j-th column is occupied by an OSN
+        contestant.</li>
+    <li><code>v</code> if the chair in the i-th row and the j-th column is initially empty and you
+        put an invigilator on the chair sitting to the south.</li>
+    <li><code>^</code> if the chair in the i-th row and the j-th column is initially empty and you
+        put an invigilator on the chair sitting to the north.</li>
+    <li><code>></code> if the chair in the i-th row and the j-th column is initially empty and you
+        put an invigilator on the chair sitting to the east.</li>
+    <li><code><</code> if the chair in the i-th row and the j-th column is initially empty and you
+        put an invigilator on the chair sitting to the west.</li>
+  </ul>
+</p>
+
+<samplecase1/>
+
+<h3>Explanation of Sample 1</h3>
+<p>
+  The following output is also a correct output.
+</p>
+<pre>
+&gt;x&lt;x&lt;
+.^x&lt;.
+v...v
+.&lt;.&gt;x
+</pre>
+
+<h3>Scoring</h3>
+<p>
+  Your output will achieve a score on a test case if your output follows the specified output format
+  and satisfies all the following conditions:
+</p>
+<ul>
+  <li>If S[i][j] = <code>.</code> and (i + j) is odd, then the j-th character in the i-th row of
+      your output is <code>.</code>.</li>
+  <li>If S[i][j] = <code>.</code> and (i + j) is even, then the j-th character in the i-th row of
+      your output is either <code>.</code>, <code>v</code>, <code>^</code>, <code>></code>, or
+      <code><</code>.</li>
+  <li>If S[i][j] = <code>x</code>, then the j-th character in the i-th row of your output is
+      <code>x</code>.</li>
+</ul>
+<p>
+  If P is the number of OSN contestants that are invigilated by at least one invigilator in your
+  solution, and Q is the number of maximum OSN contestants that can be invigilated by at least one
+  invigilator in an optimal solution, then your score is:
+</p>
+<table border="1">
+  <thead>
+    <th>Condition</th>
+    <th>Points</th>
+  </thead>
+  <tbody>
+    <tr><td>P = Q</td><td>20</td></tr>
+    <tr><td>P &lt; Q</td><td><img src="render/formula.gif"/></td></tr>
+    <!--LaTeX: \left\lfloor 20 \times \left( \frac{P}{Q} \right )^4 \right\rfloor -->
+  </tbody>
+</table>
+
+<h3>Test Cases</h3>
+<p>
+  For all test cases:
+</p>
+<ul>
+  <li>2 &le; R, C &le; 1,000.</li>
+  <li>S contains only the characters <code>.</code> or <code>x</code>.</li>
+  <li>There is at least one character <code>x</code> in S.</li>
+  <li>If (i + j) is even, then S[i][j] = <code>.</code>.</li>
+</ul>
+
+<h4>mengawasi_1.in</h4>
+<ul>
+  <li>R = 4.</li>
+  <li>C = 4.</li>
+</ul>
+
+<h4>mengawasi_2.in</h4>
+<ul>
+  <li>R = 53.</li>
+  <li>C = 97.</li>
+  <li>S[i][1] = <code>.</code>, for 1 &le; i &le; R.</li>
+</ul>
+
+<h4>mengawasi_3.in</h4>
+<ul>
+  <li>R = 90.</li>
+  <li>C = 76.</li>
+</ul>
+
+<h4>mengawasi_4.in</h4>
+<ul>
+  <li>R = 1,000.</li>
+  <li>C = 1,000.</li>
+  <li>If (i + j) is odd, then S[i][j] = <code>x</code>.</li>
+</ul>
+
+<h4>mengawasi_5.in</h4>
+<ul>
+  <li>R = 1,000.</li>
+  <li>C = 1,000.</li>
+</ul>

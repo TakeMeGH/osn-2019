@@ -1,0 +1,79 @@
+{
+  "title_en": "Manado Defense",
+  "title_id": "Pertahanan Manado",
+  "memory_limit_mb": 256,
+  "time_limit_ms": 1000,
+  "points": [5, 9, 13, 13, 17, 18, 25],
+  "sample_cases": [
+    [false, false, true, true, true, false, true],
+    [false, false, true, true, true, false, true]
+  ],
+  "test_groups": [
+	[true, false, false, false, true, false, true],
+	[false, true, true, true, true, false, true],
+	[false, false, true, true, true, true, true],
+	[false, false, true, true, true, false, true],
+	[false, false, false, true, true, true, true],
+	[false, false, false, true, true, false, true],
+	[false, false, false, false, true, true, true],
+	[false, false, false, false, true, false, true],
+	[false, false, false, false, false, true, true],
+	[false, false, false, false, false, false, true]
+  ],
+  "solutions": [
+    {
+      "filename": "solution-1.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER",
+                    "WRONG_ANSWER", "WRONG_ANSWER",
+                    "WRONG_ANSWER", "WRONG_ANSWER",
+                    "WRONG_ANSWER"]
+    },
+    {
+      "filename": "solution-2.cpp",
+      "verdicts": ["WRONG_ANSWER", "ACCEPTED",
+                    "WRONG_ANSWER", "WRONG_ANSWER",
+                    "WRONG_ANSWER", "WRONG_ANSWER",
+                    "WRONG_ANSWER"]
+    },
+    {
+      "filename": "solution-3.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                    "ACCEPTED", "INCORRECT_SOLUTION",
+                    "INCORRECT_SOLUTION", "INCORRECT_SOLUTION",
+                    "INCORRECT_SOLUTION"]
+    },
+    {
+      "filename": "solution-4.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                    "ACCEPTED", "ACCEPTED",
+                    "TIME_LIMIT_EXCEEDED", "TIME_LIMIT_EXCEEDED",
+                    "TIME_LIMIT_EXCEEDED"]
+    },
+    {
+      "filename": "solution-5.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                    "ACCEPTED", "ACCEPTED",
+                    "ACCEPTED", "TIME_LIMIT_EXCEEDED",
+                    "TIME_LIMIT_EXCEEDED"]
+    },
+    {
+      "filename": "solution-6.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER",
+                    "WRONG_ANSWER", "WRONG_ANSWER",
+                    "WRONG_ANSWER", "ACCEPTED",
+                    "WRONG_ANSWER"]
+    },
+    {
+      "filename": "jonathanirvings_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED"]
+    },
+    {
+      "filename": "prabowo_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED"]
+    }
+  ]
+}

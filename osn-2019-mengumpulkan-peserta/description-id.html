@@ -1,0 +1,113 @@
+<h3>Deskripsi</h3>
+<p>
+  Perlombaan OSN akan segera dimulai! Di dalam ruang lomba telah disediakan kursi yang disusun
+  membentuk persegi panjang berisi R baris (dinomori 1 sampai R) &times; C kolom (dinomori 1 sampai
+  C). Setiap kursi mungkin dalam keadaan kosong atau ditempati oleh seorang peserta OSN.
+</p><p>
+  Keadaan seluruh kursi di dalam ruang lomba pada saat ini dapat direpresentasikan dalam sebuah
+  matriks S. Apabila kursi pada baris ke-i dan kolom ke-j pada saat ini dalam keadaan kosong, maka
+  S[i][j] berisi sebuah karakter <code>0</code>. Sebaliknya, apabila kursi pada baris ke-i dan kolom
+  ke-j pada saat ini ditempati seorang peserta, maka S[i][j] berisi sebuah karakter <code>1</code>.
+</p><p>
+  Pak Dengklek ingin memberikan pengarahan kepada para peserta OSN. Melihat para peserta OSN yang
+  duduknya tersebar, Pak Dengklek akan mengumpulkan mereka terlebih dahulu sebelum memulai
+  pengarahan. Pak Dengklek ingin agar seluruh peserta terkumpul dalam satu persegi panjang. Dengan
+  kata lain, seluruh peserta duduk di antara baris ke r<sub>1</sub> sampai r<sub>2</sub> dan kolom
+  ke c<sub>1</sub> sampai c<sub>2</sub> (untuk suatu nilai
+  1 &le; r<sub>1</sub> &le; r<sub>2</sub> &le; R dan
+  1 &le; c<sub>1</sub> &le; c<sub>2</sub> &le; C), dan tidak ada kursi kosong yang berada di dalam
+  rentang baris dan kolom tersebut.
+</p><p>
+  Untuk melakukannya, Pak Dengklek mungkin saja harus memindahkan beberapa peserta ke tempat duduk
+  lain yang mana saja selama masih kosong. Pak Dengklek ingin memindahkan sesedikit mungkin peserta
+  karena setiap pemindahan mengganggu peserta lainnya. Pak Dengklek penasaran akan banyaknya
+  pemindahan minimum yang harus dilakukan agar seluruh peserta terkumpul dalam satu persegi panjang,
+  atau jika hal tersebut tidak mungkin.
+</p>
+
+<h3>Format Masukan</h3>
+<p>
+  Masukan diberikan dalam format berikut:
+</p>
+<pre>
+R C
+S[1][1]S[1][2]...S[1][C]
+S[2][1]S[2][2]...S[2][C]
+.             .  .
+.              . .
+.               ..
+S[R][1]S[R][2]...S[R][C]
+</pre>
+
+<h3>Format Keluaran</h3>
+<p>
+  Sebuah baris yang berisi banyaknya pemindahan minimum yang harus dilakukan agar seluruh peserta
+  terkumpul dalam satu persegi panjang, atau <code>-1</code> jika hal tersebut tidak mungkin.
+</p>
+
+<samplecase1/>
+
+<h3>Penjelasan Contoh 1</h3>
+<p>
+  Pada contoh ini, seluruh peserta telah terkumpul dalam satu persegi panjang, sehingga tidak ada
+  pemindahan yang perlu dilakukan.
+</p>
+
+<samplecase2/>
+
+<h3>Penjelasan Contoh 2</h3>
+<p>
+  Pada contoh ini, Pak Dengklek dapat memindahkan peserta yang sedang duduk di baris pertama dan
+  kolom ketiga ke tempat duduk pada baris ketiga dan kolom pertama. Setelah pemindahan itu, seluruh
+  peserta telah terkumpul dalam satu persegi panjang, sehingga hanya diperlukan 1 pemindahan.
+</p>
+
+<samplecase3/>
+
+<h3>Penjelasan Contoh 3</h3>
+<p>
+  Pada contoh ini, tidak ada cara untuk mengumpulkan seluruh peserta dalam satu persegi panjang.
+</p>
+
+<h3>Subsoal</h3>
+<p>
+  Untuk semua subsoal, berlaku:
+</p>
+<ul>
+  <li>1 &le; R, C.</li>
+  <li>1 &le; R &times; C &le; 100.000.</li>
+  <li>S hanya mengandung karakter <code>0</code> atau <code>1</code>.</li>
+  <li>Terdapat setidaknya satu karakter <code>1</code> pada S.</li>
+</ul>
+
+<subtask1/>
+<open1/>
+
+<subtask2/>
+<open2/>
+
+<subtask3/>
+<ul>
+  <li>R = 1.</li>
+  <li>R &times; C &le; 2.000.</li>
+</ul>
+
+<subtask4/>
+<ul>
+  <li>R = 1.</li>
+</ul>
+
+<subtask5/>
+<ul>
+  <li>R &times; C &le; 200.</li>
+</ul>
+
+<subtask6/>
+<ul>
+  <li>R &times; C &le; 2.000.</li>
+</ul>
+
+<subtask7/>
+<ul>
+  <li>Tidak ada batasan tambahan.</li>
+</ul>

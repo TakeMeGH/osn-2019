@@ -1,0 +1,84 @@
+{
+  "title_en": "Detecting Gold",
+  "title_id": "Mencari Emas",
+  "memory_limit_mb": 256,
+  "time_limit_ms": 1000,
+  "points": [13, 21, 8, 20, 11, 27],
+  "sample_cases": [
+    [false, false, false, false, false, true]
+  ],
+  "test_groups": [
+    [true, false, true, true, false, false],
+    [true, false, false, true, false, false],
+    [true, false, false, false, false, false],
+    [false, true, false, false, true, true],
+    [false, true, false, false, false, true],
+    [false, false, true, true, false, false],
+    [false, false, false, true, false, false],
+    [false, false, false, false, true, true],
+    [false, false, false, false, false, true]
+  ],
+  "solutions": [
+    {
+      "filename": "jonathanirvings_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "jonathanirvings_rte.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "RUNTIME_ERROR", "RUNTIME_ERROR",
+                   "ACCEPTED", "RUNTIME_ERROR"]
+    },
+    {
+      "filename": "jonathanirvings_solution-1.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "jonathanirvings_solution-2.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "RUNTIME_ERROR", "RUNTIME_ERROR",
+                   "WRONG_ANSWER", "RUNTIME_ERROR"]
+    },
+    {
+      "filename": "jonathanirvings_solution-3.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "jonathanirvings_solution-4.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "jonathanirvings_solution-5.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "jonathanirvings_solution-4_wa.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "ya_wa.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER"]
+    }
+  ],
+  "interactive": true
+}

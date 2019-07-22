@@ -1,0 +1,101 @@
+<h3>Description</h3>
+<p>
+  You and Pak Dengklek have just found a treasure chest. Inside the chest, there are N distinct
+  items, numbered 1 to N. The i-th item has a value of H[i].
+</p><p>
+  Among these N items, there are P items that you like, those items numbered A[1], A[2], ..., and
+  A[P]. Similarly, there are Q items that Pak Dengklek like, those items numbered B[1], B[2], ...,
+  and B[Q]. Each item is guaranteed to be liked by either you or Pak Dengklek (or both).
+</p><p>
+  Starting from you, you and Pak Dengklek will alternatingly take one of the items that has not
+  been taken before. You can only take an item that you like. If there is no item that you like and
+  has not been taken, then you have to skip your turn. Similarly, Pak Dengklek can only take an
+  item that he likes. Pak Dengklek also has to skip his turn if there is no item that he likes and
+  has not been taken.
+</p><p>
+  You and Pak Dengklek will stop taking the items when there is no more item left. Compute the
+  maximum total item value that you can take if Pak Dengklek also tries to maximize the total item
+  value that he takes.
+</p>
+
+<h3>Input Format</h3>
+<p>
+  The input is given with the following format:
+</p>
+<pre>
+N P Q
+H[1] H[2] ... H[N]
+A[1] A[2] ... A[P]
+B[1] B[2] ... B[Q]
+</pre>
+
+<h3>Output Format</h3>
+<p>
+  A single line containing the maximum total item value that you can take if Pak Dengklek also tries
+  to maximize the total item value that he takes.
+</p>
+
+<samplecase1/>
+
+<h3>Explanation of Sample 1</h3>
+<p>
+  The following is a possible scenario:
+  <ul>
+    <li>In the first turn, you can take the third item and Pak Dengklek can take the fifth item.
+    </li>
+    <li>In the second turn, you can take the first item and Pak Dengklek can take the second item.
+    </li>
+    <li>In the third turn, you can take the sixth item and Pak Dengklek can take the fourth item.
+    </li>
+    <li>In the fourth turn, you cannot take an item and Pak Dengklek can take the seventh item.
+    </li>
+  </ul>
+  All items have been taken and you take a total item value of H[3] + H[1] + H[6] = 6 + 1 + 2 = 9.
+  There is no way for you to take a total item value of more than 9.
+</p>
+
+<h3>Subtasks</h3>
+<p>
+  For all subtasks:
+</p>
+<ul>
+  <li>1 &le; N &le; 200,000.</li>
+  <li>1 &le; P, Q &le; N.</li>
+  <li>0 &le; H[i] &le; 1,000,000.</li>
+  <li>1 &le; A[i], B[i] &le; N.</li>
+  <li>A[i - 1] &lt; A[i], for 2 &le; i &le; P.</li>
+  <li>B[i - 1] &lt; B[i], for 2 &le; i &le; Q.</li>
+  <li>Each item is guaranteed to be liked by either you or Pak Dengklek (or both).</li>
+</ul>
+
+<subtask1/>
+<open1/>
+
+<subtask2/>
+<open2/>
+
+<subtask3/>
+<ul>
+  <li>N &le; 2.</li>
+</ul>
+
+<subtask4/>
+<ul>
+  <li>N &le; 2,000.</li>
+</ul>
+
+<subtask5/>
+<ul>
+  <li>H[i - 1] = H[i], for 2 &le; i &le; N.</li>
+</ul>
+
+<subtask6/>
+<ul>
+  <li>P = Q.</li>
+  <li>A[i] = B[i].</li>
+</ul>
+
+<subtask7/>
+<ul>
+  <li>No additional constraints.</li>
+</ul>

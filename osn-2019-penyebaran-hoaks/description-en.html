@@ -1,0 +1,116 @@
+<h3>Description</h3>
+<p>
+  Pak Dengklek has just developed a social media site. There are N users using the site, numbered 1
+  to N. There are S hours in one day. All of these users have a fixed usage schedule from day to
+  day. Therefore, the i-th user will be online T[i] times every day:
+  <ul>
+    <li>from the start of the A[i][1]-th hour to the end of the B[i][1]-th hour,</li>
+    <li>from the start of the A[i][2]-th hour to the end of the B[i][2]-th hour,</li>
+    <li>...</li>
+    <li>and from the start of the A[i][T[i]]-th hour to the end of the B[i][T[i]]-th hour.</li>
+  </ul>
+</p><p>
+  At any time, all users on the site like to share news to all other online users. Unfortunately,
+  one of the N users has a hoax at the start of the first day and will spread it. Hence, all users
+  who meet the user with the hoax will also have the hoax at the end of the first day. Two users are
+  stated to be met if there is at least an hour where the two users are both online.
+</p><p>
+  This hoax will also be spread on the second day. Therefore, all users who meet the user with the
+  hoax at the end of the first day will also have the hoax at the end of the second day. This
+  continued the following days.
+</p><p>
+  There are Q scenarios, numbered 1 to Q. On the i-th scenario, the user who has the hoax at the
+  start of the first day is the P[i]-th user. A different scenario might cause a different hoax
+  spreading. Therefore, for each scenario, Pak Dengklek wonders on the number of users with the hoax
+  at the end of the N-th day, where N is the number of users.
+</p>
+
+<h3>Input Format</h3>
+<p>
+  The input is given with the following format:
+</p>
+<pre>
+N S Q
+T[1] A[1][1] B[1][1] A[1][2] B[1][2] ... A[1][T[1]] B[1][T[1]]
+T[2] A[2][1] B[2][1] A[2][2] B[2][2] ... A[2][T[2]] B[2][T[2]]
+.
+.
+.
+T[N] A[N][1] B[N][1] A[N][2] B[N][2] ... A[N][T[N]] B[N][T[N]]
+P[1]
+P[2]
+.
+.
+.
+P[Q]
+</pre>
+
+<h3>Output Format</h3>
+<p>
+  Q lines: the i-th line contains the number of users with the hoax at the end of the N-th day on
+  the i-th scenario.
+</p>
+
+<samplecase1/>
+
+<h3>Explanation of Sample 1</h3>
+<p>
+  On the first scenario, the first user meets the second user (at the second hour to the third hour)
+  and the fourth user (at the ninth hour). Therefore, at the end of the first day, the two users
+  will have the hoax. The second user also meets the third user (at the first hour). Therefore, at
+  the end of the second day, the third user will also have the hoax. There will be no hoax spreading
+  on the third, fourth, and fifth day, thus 4 users will have the hoax at the end of the fifth day.
+</p><p>
+  On the second scenario, the fifth user does not meet other users, thus other users will not have
+  the hoax.
+</p>
+
+<h3>Subtasks</h3>
+<p>
+  For all subtasks:
+</p>
+<ul>
+  <li>1 &le; Q &le; N &le; 200,000.</li>
+  <li>1 &le; S &le; 10<sup>9</sup>.</li>
+  <li>1 &le; T[i] &le; S</sup>.</li>
+  <li>The sum of T[i] for all 1 &le; i &le; N does not exceed 200,000.</li>
+  <li>1 &le; A[i][j] &le; B[i][j] &le; S</sup>.</li>
+  <li>B[i][j - 1] &lt; A[i][j], for 2 &le; j &le; T[i].</li>
+  <li>1 &le; P[i] &le; N.</li>
+  <li>P[i - 1] &lt; P[i], for 2 &le; i &le; Q.</li>
+</ul>
+
+<subtask1/>
+<open1/>
+
+<subtask2/>
+<open2/>
+
+<subtask3/>
+<ul>
+  <li>N, S, Q &le; 50.</li>
+  <li>The sum of T[i] for all 1 &le; i &le; N does not exceed 50.</li>
+</ul>
+
+<subtask4/>
+<ul>
+  <li>N, Q &le; 50.</li>
+  <li>The sum of T[i] for all 1 &le; i &le; N does not exceed 50.</li>
+</ul>
+
+<subtask5/>
+<ul>
+  <li>N, Q &le; 200.</li>
+  <li>The sum of T[i] for all 1 &le; i &le; N does not exceed 200.</li>
+</ul>
+
+<subtask6/>
+<ul>
+  <li>N, Q &le; 2,000.</li>
+  <li>The sum of T[i] for all 1 &le; i &le; N does not exceed 2,000.</li>
+</ul>
+
+<subtask7/>
+<ul>
+  <li>No additional constraints.</li>
+</ul>

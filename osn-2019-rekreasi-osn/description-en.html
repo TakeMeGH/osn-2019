@@ -1,0 +1,219 @@
+<h3>Description</h3>
+<p>
+  After both competition days, OSN contestants are going to have an excursion. The place for the
+  excursion can be represented by squares of R rows (numbered 1 to R from north to south) and C
+  columns (numbered 1 to C from west to east). The square in the i-th row and the j-th column is
+  denoted as the square (i, j). Each square might be empty or be blocked by a barrier.
+</p><p>
+  The state of all squares in the excursion place can be represented by a matrix S. If the square
+  (i, j) is initially empty, then S[i][j] contains a character <code>.</code>. Otherwise, if the
+  square (i, j) is initially blocked by a barrier, then S[i][j] contains a character <code>#</code>.
+</p><p>
+  The entrance of the excursion place is located in the square (1, 1) and the exit of the excursion
+  place is located in the square (R, C). All contestants are initially in the square (1, 1). In each
+  step, contestants can move one square either to the south or to the east, so they are closer to
+  the exit. Contestants can only move to an empty square.
+</p><p>
+  The OSN committee has prepared an excursion route that is preferably followed by the contestants.
+  This route is represented by a string M containing R + C - 2 characters. If the i-th step on this
+  route is a square to the east, then M[i] contains a character <code>></code>. Otherwise, if the
+  i-th step on this route is a square to the south, then M[i] contains a character <code>v</code>.
+  This route is guaranteed to pass through only empty squares.
+</p><p>
+  Unfortunately, there might be another route from the entrance to the exit. This troubles the
+  committee to watch all contestants since contestants might take the other route instead.
+  Therefore, the committee wants to put barriers in several empty squares that are not passed by the
+  route prepared by the committee so there is only one route from the entrance to the exit. In other
+  words, all routes from the entrance to the exit pass the exact same set of squares as the route
+  prepared by the committee.
+</p><p>
+  Because putting a barrier in an empty square takes time, the committee wants to put as few
+  barriers as possible. Determine which squares should be blocked by barriers. If there is more than
+  one solution, you can output any. Your score will depend on the number of barriers you put, using
+  a formula that will be explained in the Scoring section.
+</p>
+
+<h3>Problem Type Information</h3>
+<p>
+  This is an "output-only" problem. For each test case, you write the output to a file.
+</p><p>
+  The input files for this problem can be downloaded <a href="render/inputs.zip">here</a>. Inside
+  the .zip file, there are 2 + 10 input files to solve: rekreasi_sample_1.in, rekreasi_sample_2.in,
+  rekreasi_1.in, rekreasi_2.in, ..., rekreasi_10.in. The sample input (rekreasi_sample_1.in and
+  rekreasi_sample_2.in) are not included in the final score.
+</p><p>
+  For each input file that you solve (you don't have to solve all input files), create an output
+  file rekreasi_sample_X.out (for sample input) or rekreasi_X.out, where X
+  is the test case number. Then, compress all files into a single .zip file, and submit.
+</p>
+
+<h3>Input Format</h3>
+<p>
+  The input is given with the following format:
+</p>
+<pre>
+R C
+M[1]M[2]...M[R + C - 2]
+S[1][1]S[1][2]...S[1][C]
+S[2][1]S[2][2]...S[2][C]
+.             .  .
+.              . .
+.               ..
+S[R][1]S[R][2]...S[R][C]
+</pre>
+
+<h3>Output Format</h3>
+<p>
+  R lines: the i-th line contains C characters. The j-th character in the i-th line is:
+  <ul>
+    <li><code>.</code> if the square (i, j) is initially empty and you let it to be empty.</li>
+    <li><code>x</code> if the square (i, j) is initially empty and you put a barrier in it.</li>
+    <li><code>#</code> if the square (i, j) is initially blocked by a barrier.</li>
+  </ul>
+</p>
+
+<samplecase1/>
+
+<h3>Explanation of Sample 1</h3>
+<p>
+  This sample is illustrated by the following image, where solid lines represent the route prepared
+  by the committee, and the dotted lines represent an alternative route.
+</p>
+<img src="render/initial.png"/>
+<p>
+  Therefore, a barrier has to be put in at least one empty square. The following output is also a
+  correct output.
+</p>
+<pre>
+....#
+.#..#
+.#.#.
+.x...
+...#.
+</pre>
+
+<samplecase2/>
+
+<h3>Explanation of Sample 2</h3>
+<p>
+  Since contestants can move one square only either to the south or to the east, contestants can not
+  pass through the twisting route in this sample. Therefore, there is no alternative route and the
+  committee does not have to put a barrier in any empty square.
+</p>
+
+<h3>Scoring</h3>
+<p>
+  Your output will achieve a score on a test case if your output follows the specified output format
+  and satisfies all the following conditions:
+</p>
+<ul>
+  <li>If S[i][j] = <code>.</code>, then the j-th character in the i-th row of your output is either
+      <code>.</code> or <code>x</code>.</li>
+  <li>If S[i][j] = <code>#</code>, then the j-th character in the i-th row of your output is
+      <code>#</code>.</li>
+  <li>You do not put a barrier in a square passed by the route prepared by the committee.</li>
+  <li>All routes from the entrance to the exit pass the exact same set of squares as the route
+      prepared by the committee.</li>
+</ul>
+<p>
+  If P is the number of additional barriers you put, and Q is the minimum number of additional
+  barriers that have to be put in an optimal solution, then your score is:
+</p>
+<table border="1">
+  <thead>
+    <th>Condition</th>
+    <th>Points</th>
+  </thead>
+  <tbody>
+    <tr><td>P = Q</td><td>10</td></tr>
+    <tr><td>Q &lt; P &le; (R + C - 2)</td><td><img src="render/formula.gif"/></td></tr>
+    <!--LaTeX: \left\lfloor 2 + 8 \times \left( \frac{(R + C - 2) - P)}{(R + C - 2) - Q)} \right )^4 \right\rfloor -->
+    <tr><td>(R + C - 2) &lt; P &le; (2 &times; (R + C - 2))</td><td>2</td></tr>
+    <tr><td>(2 &times; (R + C - 2)) &lt; P</td><td>1</td></tr>
+  </tbody>
+</table>
+
+<h3>Test Cases</h3>
+<p>
+  For all test cases:
+</p>
+<ul>
+  <li>5 &le; R, C &le; 1,000.</li>
+  <li>M contains only the characters <code>></code> or <code>v</code>.</li>
+  <li>S contains only the characters <code>.</code> or <code>#</code>.</li>
+  <li>The route prepared by the committee is guaranteed to pass through only empty squares.</li>
+</ul>
+
+<h4>rekreasi_1.in</h4>
+<ul>
+  <li>R = 6.</li>
+  <li>C = 6.</li>
+  <li>S contains only the characters <code>.</code>.</li>
+</ul>
+
+<h4>rekreasi_2.in</h4>
+<ul>
+  <li>R = 5.</li>
+  <li>C = 7.</li>
+  <li>M[i] = <code>></code>, for 1 &le; i &lt; C.</li>
+  <li>M[i] = <code>v</code>, for C &le; i &le; R + C - 2.</li>
+</ul>
+
+<h4>rekreasi_3.in</h4>
+<ul>
+  <li>R = 7.</li>
+  <li>C = 5.</li>
+</ul>
+
+<h4>rekreasi_4.in</h4>
+<ul>
+  <li>R = 100.</li>
+  <li>C = 16.</li>
+</ul>
+
+<h4>rekreasi_5.in</h4>
+<ul>
+  <li>R = 677.</li>
+  <li>C = 751.</li>
+  <li>M[i] = <code>></code>, for 1 &le; i &lt; C.</li>
+  <li>M[i] = <code>v</code>, for C &le; i &le; R + C - 2.</li>
+  <li>S contains only the characters <code>.</code>.</li>
+</ul>
+
+<h4>rekreasi_6.in</h4>
+<ul>
+  <li>R = 93.</li>
+  <li>C = 78.</li>
+  <li>S contains only the characters <code>.</code>.</li>
+</ul>
+
+<h4>rekreasi_7.in</h4>
+<ul>
+  <li>R = 1,000.</li>
+  <li>C = 1,000.</li>
+  <li>S contains only the characters <code>.</code>.</li>
+</ul>
+
+<h4>rekreasi_8.in</h4>
+<ul>
+  <li>R = 100.</li>
+  <li>C = 99.</li>
+  <li>M[i] = <code>></code>, for 1 &le; i &lt; C.</li>
+  <li>M[i] = <code>v</code>, for C &le; i &le; R + C - 2.</li>
+</ul>
+
+<h4>rekreasi_9.in</h4>
+<ul>
+  <li>R = 853.</li>
+  <li>C = 814.</li>
+  <li>M[i] = <code>></code>, for 1 &le; i &lt; C.</li>
+  <li>M[i] = <code>v</code>, for C &le; i &le; R + C - 2.</li>
+</ul>
+
+<h4>rekreasi_10.in</h4>
+<ul>
+  <li>R = 1,000.</li>
+  <li>C = 1,000.</li>
+  <li>M[i] = <code>></code>, for 1 &le; i &lt; C.</li>
+  <li>M[i] = <code>v</code>, for C &le; i &le; R + C - 2.</li>
+</ul>

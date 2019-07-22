@@ -1,0 +1,137 @@
+{
+  "title_en": "OSN Excursion",
+  "title_id": "Rekreasi OSN",
+  "memory_limit_mb": 1024,
+  "time_limit_ms": 1000,
+  "points": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+  "sample_cases": [
+    [false, false, false, false, false, false, false, false, false, false],
+    [false, false, false, false, false, false, false, false, false, false]
+  ],
+  "test_groups": [
+    [true, false, false, false, false, false, false, false, false, false],
+    [false, true, false, false, false, false, false, false, false, false],
+    [false, false, true, false, false, false, false, false, false, false],
+    [false, false, false, true, false, false, false, false, false, false],
+    [false, false, false, false, true, false, false, false, false, false],
+    [false, false, false, false, false, true, false, false, false, false],
+    [false, false, false, false, false, false, true, false, false, false],
+    [false, false, false, false, false, false, false, true, false, false],
+    [false, false, false, false, false, false, false, false, true, false],
+    [false, false, false, false, false, false, false, false, false, true]
+  ],
+  "solutions": [
+    {
+      "filename": "jonathanirvings_bitmask.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "INCORRECT_SOLUTION", "INCORRECT_SOLUTION",
+                   "INCORRECT_SOLUTION", "INCORRECT_SOLUTION",
+                   "INCORRECT_SOLUTION", "INCORRECT_SOLUTION"]
+    },
+    {
+      "filename": "jonathanirvings_nobarrier.cpp",
+      "verdicts": ["ACCEPTED", "INCORRECT_SOLUTION",
+                   "INCORRECT_SOLUTION", "INCORRECT_SOLUTION",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "INCORRECT_SOLUTION",
+                   "INCORRECT_SOLUTION", "INCORRECT_SOLUTION"]
+    },
+    {
+      "filename": "jonathanirvings_shortestpath.cpp",
+      "verdicts": ["INCORRECT_SOLUTION", "ACCEPTED",
+                   "INCORRECT_SOLUTION", "INCORRECT_SOLUTION",
+                   "ACCEPTED", "INCORRECT_SOLUTION",
+                   "INCORRECT_SOLUTION", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "jonathanirvings_wa_nobarrier.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "jonathanirvings_wa_shortestpath.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "jonathanirvings_wa_shortestpathcombined.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "maxhaibara_shortestpath.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "maxhaibara_nobarrier.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "maxhaibara_haram_vertical_and_horizontal_only.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "maxhaibara_haram_vertical_or_horizontal_only.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "maxhaibara_haram_vertical_or_horizontal_or_diagonal_only.cpp",
+      "verdicts": ["WRONG_ANSWER", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "maxhaibara_haram_independent_triangle.cpp",
+      "verdicts": ["WRONG_ANSWER", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo_maxflow.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "TIME_LIMIT_EXCEEDED", "ACCEPTED",
+                   "TIME_LIMIT_EXCEEDED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "prabowo_maxhaibara_shortestpath_maxflow_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED"]
+    }
+  ]
+}

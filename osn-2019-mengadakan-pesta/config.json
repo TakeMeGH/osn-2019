@@ -1,0 +1,51 @@
+{
+  "title_en": "Organizing Party",
+  "title_id": "Mengadakan Pesta",
+  "memory_limit_mb": 256,
+  "time_limit_ms": 1000,
+  "points": [12, 15, 20, 53],
+  "sample_cases": [
+    [false, false, true, true]
+  ],
+  "test_groups": [
+    [true, true, true, true],
+    [true, false, true, true],
+    [true, false, false, true],
+    [false, true, true, true],
+    [false, false, true, true],
+    [false, false, false, true]
+  ],
+  "solutions": [
+    {
+      "filename": "jonathanirvings_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "jonathanirvings_wa.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "prabowo_wa.cpp",
+      "verdicts": ["WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "solution-1.cpp",
+      "verdicts": ["ACCEPTED", "WRONG_ANSWER",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "solution-2.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER"]
+    },
+    {
+      "filename": "solution-3.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "WRONG_ANSWER"]
+    }
+  ],
+  "interactive": true
+}

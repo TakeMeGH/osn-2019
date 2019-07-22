@@ -1,0 +1,169 @@
+<h3>Deskripsi</h3>
+<p>
+  Perlombaan OSN akan segera dimulai! Di dalam ruang lomba telah disediakan kursi yang disusun
+  membentuk persegi panjang berisi R baris (dinomori 1 sampai R dari utara ke selatan) &times; C
+  kolom (dinomori 1 sampai C dari barat ke timur). Kursi pada baris ke-i dan kolom ke-j disediakan
+  untuk peserta OSN jika (i + j) bernilai ganjil, dan disediakan untuk pengawas OSN jika (i + j)
+  bernilai genap.
+</p><p>
+  Setiap kursi yang disediakan untuk pengawas OSN pada saat ini masih dalam keadaan kosong. Setiap
+  kursi yang disediakan untuk peserta OSN mungkin saja kosong atau ditempati oleh seorang peserta
+  OSN. Terdapat setidaknya seorang peserta OSN.
+</p><p>
+  Keadaan seluruh kursi di dalam ruang lomba pada saat ini dapat direpresentasikan dalam sebuah
+  matriks S. Apabila kursi pada baris ke-i dan kolom ke-j pada saat ini dalam keadaan kosong, maka
+  S[i][j] berisi sebuah karakter <code>.</code>. Sebaliknya, apabila kursi pada baris ke-i dan kolom
+  ke-j pada saat ini ditempati seorang peserta, maka S[i][j] berisi sebuah karakter <code>x</code>.
+</p><p>
+  Anda ingin mengawasi seluruh peserta OSN. Karenanya, untuk setiap kursi yang disediakan untuk
+  pengawas OSN, Anda dapat meletakkan seorang pengawas dan menentukan arah duduk pengawas tersebut.
+  Pengawas yang duduk pada baris ke-i dan kolom ke-j dapat mengawasi:
+  <ul>
+    <li>Peserta OSN yang duduk pada baris ke-(i + 1) dan kolom ke-j, bila pengawas tersebut duduk
+        mengarah ke selatan.</li>
+    <li>Peserta OSN yang duduk pada baris ke-(i - 1) dan kolom ke-j, bila pengawas tersebut duduk
+        mengarah ke utara.</li>
+    <li>Peserta OSN yang duduk pada baris ke-i dan kolom ke-(j + 1), bila pengawas tersebut duduk
+        mengarah ke timur.</li>
+    <li>Peserta OSN yang duduk pada baris ke-i dan kolom ke-(j - 1), bila pengawas tersebut duduk
+        mengarah ke barat.</li>
+  </ul>
+</p><p>
+  Nilai Anda akan bergantung pada banyaknya peserta OSN yang diawasi oleh setidaknya satu pengawas,
+  menggunakan rumus yang akan dijelaskan pada bagian Penilaian.
+</p>
+
+<h3>Informasi Tipe Soal</h3>
+<p>
+  Soal ini bertipe "output-only". Untuk setiap kasus uji, Anda menuliskan keluaran program ke dalam
+  sebuah berkas keluaran.
+</p><p>
+  Masukan untuk soal ini dapat diunduh di <a href="render/inputs.zip">sini</a>. Di dalam berkas .zip
+  tersebut terdapat 1 + 5 masukan untuk diselesaikan: mengawasi_sample_1.in, mengawasi_1.in,
+  mengawasi_2.in, ..., mengawasi_5.in. Masukan contoh (mengawasi_sample_1.in) tidak termasuk dalam
+  penilaian peserta.
+</p><p>
+  Untuk setiap berkas masukan yang diselesaikan (Anda tidak harus menyelesaikan semua masukan),
+  buatlah berkas keluaran dengan nama mengawasi_sample_X.out (untuk masukan contoh) atau
+  mengawasi_X.out, dengan X adalah nomor kasus uji. Setelah itu, kompres semua berkas keluaran dalam
+  sebuah berkas .zip, lalu kumpulkan.
+</p>
+
+<h3>Format Masukan</h3>
+<p>
+  Masukan diberikan dalam format berikut:
+</p>
+<pre>
+R C
+S[1][1]S[1][2]...S[1][C]
+S[2][1]S[2][2]...S[2][C]
+.             .  .
+.              . .
+.               ..
+S[R][1]S[R][2]...S[R][C]
+</pre>
+
+<h3>Format Keluaran</h3>
+<p>
+  R baris: baris ke-i berisi C karakter. Karakter ke-j pada baris ke-i adalah:
+  <ul>
+    <li><code>.</code> jika kursi pada baris ke-i dan kolom ke-j pada awalnya kosong dan Anda
+        membiarkannya kosong.</li>
+    <li><code>x</code> jika kursi pada baris ke-i dan kolom ke-j ditempati seorang peserta.</li>
+    <li><code>v</code> jika kursi pada baris ke-i dan kolom ke-j pada awalnya kosong dan Anda
+        meletakkan seorang pengawas yang duduk mengarah ke selatan pada kursi tersebut.</li>
+    <li><code>^</code> jika kursi pada baris ke-i dan kolom ke-j pada awalnya kosong dan Anda
+        meletakkan seorang pengawas yang duduk mengarah ke utara pada kursi tersebut.</li>
+    <li><code>></code> jika kursi pada baris ke-i dan kolom ke-j pada awalnya kosong dan Anda
+        meletakkan seorang pengawas yang duduk mengarah ke timur pada kursi tersebut.</li>
+    <li><code><</code> jika kursi pada baris ke-i dan kolom ke-j pada awalnya kosong dan Anda
+        meletakkan seorang pengawas yang duduk mengarah ke barat pada kursi tersebut.</li>
+  </ul>
+</p>
+
+<samplecase1/>
+
+<h3>Penjelasan Contoh 1</h3>
+<p>
+  Keluaran berikut juga merupakan keluaran yang benar.
+</p>
+<pre>
+&gt;x&lt;x&lt;
+.^x&lt;.
+v...v
+.&lt;.&gt;x
+</pre>
+
+<h3>Penilaian</h3>
+<p>
+  Keluaran Anda akan mendapatkan nilai pada sebuah kasus uji jika keluaran Anda mengikuti format
+  keluaran yang disebutkan sebelumnya dan memenuhi seluruh syarat berikut:
+</p>
+<ul>
+  <li>Jika S[i][j] = <code>.</code> dan (i + j) bernilai ganjil, maka karakter ke-j pada baris ke-i
+      dalam keluaran Anda adalah <code>.</code>.</li>
+  <li>Jika S[i][j] = <code>.</code> dan (i + j) bernilai genap, maka karakter ke-j pada baris ke-i
+      dalam keluaran Anda adalah <code>.</code>, <code>v</code>, <code>^</code>, <code>></code>,
+      atau <code><</code>.</li>
+  <li>Jika S[i][j] = <code>x</code>, maka karakter ke-j pada baris ke-i dalam keluaran Anda adalah
+      <code>x</code>.</li>
+</ul>
+<p>
+  Jika P adalah banyaknya peserta OSN yang diawasi oleh setidaknya satu pengawas pada solusi Anda,
+  dan Q adalah banyaknya peserta OSN maksimum yang dapat diawasi oleh setidaknya satu pengawas pada
+  solusi optimal, maka nilai yang Anda dapatkan adalah:
+</p>
+<table border="1">
+  <thead>
+    <th>Kondisi</th>
+    <th>Poin</th>
+  </thead>
+  <tbody>
+    <tr><td>P = Q</td><td>20</td></tr>
+    <tr><td>P &lt; Q</td><td><img src="render/formula.gif"/></td></tr>
+    <!--LaTeX: \left\lfloor 20 \times \left( \frac{P}{Q} \right )^4 \right\rfloor -->
+  </tbody>
+</table>
+
+<h3>Kasus Uji</h3>
+<p>
+  Untuk setiap kasus uji:
+</p>
+<ul>
+  <li>2 &le; R, C &le; 1.000.</li>
+  <li>S hanya mengandung karakter <code>.</code> atau <code>x</code>.</li>
+  <li>Terdapat setidaknya satu karakter <code>x</code> pada S.</li>
+  <li>Jika (i + j) bernilai genap, maka S[i][j] = <code>.</code>.</li>
+</ul>
+
+<h4>mengawasi_1.in</h4>
+<ul>
+  <li>R = 4.</li>
+  <li>C = 4.</li>
+</ul>
+
+<h4>mengawasi_2.in</h4>
+<ul>
+  <li>R = 53.</li>
+  <li>C = 97.</li>
+  <li>S[i][1] = <code>.</code>, untuk 1 &le; i &le; R.</li>
+</ul>
+
+<h4>mengawasi_3.in</h4>
+<ul>
+  <li>R = 90.</li>
+  <li>C = 76.</li>
+</ul>
+
+<h4>mengawasi_4.in</h4>
+<ul>
+  <li>R = 1.000.</li>
+  <li>C = 1.000.</li>
+  <li>Jika (i + j) bernilai ganjil, maka S[i][j] = <code>x</code>.</li>
+</ul>
+
+<h4>mengawasi_5.in</h4>
+<ul>
+  <li>R = 1.000.</li>
+  <li>C = 1.000.</li>
+</ul>

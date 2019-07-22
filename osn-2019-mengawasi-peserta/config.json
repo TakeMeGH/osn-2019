@@ -1,0 +1,30 @@
+{
+  "title_en": "Invigilating Contestants",
+  "title_id": "Mengawasi Peserta",
+  "memory_limit_mb": 256,
+  "time_limit_ms": 1000,
+  "points": [20, 20, 20, 20, 20],
+  "sample_cases": [
+    [false, false, false, false, false]
+  ],
+  "test_groups": [
+    [true, false, false, false, false],
+    [false, true, false, false, false],
+    [false, false, true, false, false],
+    [false, false, false, true, true],
+    [false, false, false, false, true]
+  ],
+  "solutions": [
+    {
+      "filename": "prabowo_bipartite-matching_ac.cpp",
+      "verdicts": ["ACCEPTED", "ACCEPTED", "ACCEPTED",
+                   "ACCEPTED", "ACCEPTED"]
+    },
+    {
+      "filename": "maxhaibara_onedirection.cpp",
+      "verdicts": ["WRONG_ANSWER", "ACCEPTED",
+                   "WRONG_ANSWER", "WRONG_ANSWER",
+                   "WRONG_ANSWER"]
+    }
+  ]
+}
