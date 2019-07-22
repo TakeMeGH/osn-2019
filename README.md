@@ -38,9 +38,9 @@ The problem statements and upsolving are available
 
 ## Problem Repository Structure
 
-Each problem contains a problem directory root (e.g. `example-problem/` in this
-directory is a problem directory root). A problem directory root contains
-**exactly** the following directories and files:
+Each problem contains a problem directory root (e.g.
+`osn-2019-mengawasi-peserta/` in this directory is a problem directory root). A
+problem directory root contains **exactly** the following directories and files:
 
 - [Communicator (optional) (`communicator`)](#communicator-optional)
 - [Configuration file (`config.json`)](#configuration-file)
